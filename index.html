@@ -19,19 +19,19 @@
       <form id="survey-form">
         <!--USER'S NAME-->
         <label id="name-label" for="name">* Name:</label>
-        <input id="name" type="text" placeholder="Enter your name" required>
+        <input id="name" class="box" type="text" placeholder="Enter your name" required>
 
         <!--USER'S EMAIL-->
         <label id="email-label" for="email">* Email:</label>
-        <input id="email" type="email"  placeholder="Enter your email" required>
+        <input id="email" class="box" type="email"  placeholder="Enter your email" required>
 
         <!--USER'S AGE-->
         <label id="number-label" for="number">* Age:</label>
-        <input id="number" type="number" min="1" max="100" placeholder="Enter your age" required>
+        <input id="number" class="box" type="number" min="1" max="100" placeholder="Enter your age" required>
 
         <!--USER'S ROLE-->
         <label for="dropdown">Which option best describes your current role?:</label>
-        <select id="dropdown" name="role" >
+        <select id="dropdown" class="box" name="role" >
           <option disabled selected>Select an Option</option>
           <option value="student">Student</option>
           <option value="full-time-job">Full Time Job</option>
@@ -42,8 +42,8 @@
 
 
         <!--USER'S RECOMMENDATION-->
-        <label for="ratings">How likely is it that you would recommend freeCodeCamp to a friend?</label>
-        <ul id="ratings" class="selections">
+        <label class="selections" for="ratings">How likely is it that you would recommend freeCodeCamp to a friend?</label>
+        <ul id="ratings">
           <li><input type="radio" id="definitely" name="recommendation" value="1">
               <label for="definitely">Definitely</label></li>
           <li><input put type="radio" id="maybe" name="recommendation" value="2">
@@ -54,7 +54,7 @@
 
         <!--USER'S LIKES-->
         <label for="likes">What do you like most in FCC?</label>
-        <select id="likes">
+        <select id="likes" class="box">
           <option disabled selected>Select an Option</option>
           <option value="challenges">Challenges</option>
           <option value="projects">Projects</option>
@@ -63,8 +63,8 @@
         </select>
 
         <!--USER'S DISLIKES-->
-        <label for="dislikes">Things that should be improved in the future (check all that apply):</label>
-        <ul id="dislikes" class="selections">
+        <label class="selections" for="dislikes">Things that should be improved in the future (check all that apply):</label>
+        <ul id="dislikes">
           <li><input type="checkbox" id="front-end" value="1">
               <label for="front-end">Front-end Projects</label></li>
           <li><input put type="checkbox" id="back-end" value="2">
@@ -91,11 +91,11 @@
 
         <!--ADDITIONAL COMMENTS SECTION-->
         <label for="comments">Any Comments or Suggestions?</label>
-        <textarea rows="5" columns="30" maxlength="250">
+        <textarea class="comment box" rows="4" columns="10" maxlength="250">
         </textarea>
 
         <!--SUBMIT BUTTON-->
-        <button>Submit</button>
+        <button id="submit">Submit</button>
 
       </form>
     </main>

@@ -1,36 +1,96 @@
+html{
+  font-size: 18px;
+  color: #EAEAEA;
+}
+
 
 body{
   background-color: #EAEAEA;
 }
 
+.box{
+  width: 50%;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.box:invalid{
+  border-color: red;
+}
+
+.box:focus{
+  outline: none;
+  border-width: 3px;
+  border-color: #E6BB5B;
+}
+
 #title{
-  margin: auto;
+  font-family: monospace;
+  font-size: 2rem;
+  color: #E6BB5B;
   text-align: center;
+  margin: 1rem auto 2rem auto
 }
 
 #main{
   width: 75%;
   margin: auto;
   background-color: #476E72;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 #description{
+  font-size: 1.2rem;
   text-align: center;
+  padding: 1rem;
+  background-color: #1F4C51;
+  border-bottom: 1px solid #E6BB5B;
+  border-radius: 5px 5px 0 0
 }
 
 #survey-form{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+  grid-gap: 1rem 1.7rem;
+  line-height: 1.2rem;
+}
+
+#survey-form label:nth-child(1), #survey-form label:nth-child(n+3){
+  justify-self: right;
+  text-align: right;
+  width: 80%;
+}
+
+.selections{
+  align-self: start;
 }
 
 #user-recommendation{
   display: flex;
   flex-direction: column;
+  justify-items: left;
   align-items: center;
 }
 
-.selections{
-  display: flex;
-  flex-direction: column;
+.comment.box{
+  width: 75%;
+  height: auto;
+}
+
+
+#submit{
+  grid-column: 1/3;
+  justify-self: center;
+  width: 6.5rem;
+  height: 2.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #797C8A;
+  background-color: #E6BB5B;
+  border: none;
+  border-radius: 5px;
 }
