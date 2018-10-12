@@ -27,7 +27,7 @@
 
         <!--USER'S AGE-->
         <label id="number-label" for="number">* Age:</label>
-        <input id="number" type="number" min="0" max="100" placeholder="Enter your age" required>
+        <input id="number" type="number" min="1" max="100" placeholder="Enter your age" required>
 
         <!--USER'S ROLE-->
         <label for="dropdown">Which option best describes your current role?:</label>
@@ -42,15 +42,60 @@
 
 
         <!--USER'S RECOMMENDATION-->
-        <fieldset class="fieldset">
-          <legend>How likely is it that you would recommend freeCodeCamp to a friend?</legend>
-          <label for="definitely">Definitely</label>
-          <input type="radio" id="definitely" name="recommendation">
-          <label for="maybe">Maybe</label>
-          <input type="radio" id="maybe" name="recommendation">
-          <label for="not-sure">Not Sure</label>
-          <input type="radio" id="not-sure" name="recommendation">
-        </fieldset>
+        <label for="ratings">How likely is it that you would recommend freeCodeCamp to a friend?</label>
+        <ul id="ratings" class="selections">
+          <li><input type="radio" id="definitely" name="recommendation" value="1">
+              <label for="definitely">Definitely</label></li>
+          <li><input put type="radio" id="maybe" name="recommendation" value="2">
+              <label for="maybe">Maybe</label></li>
+          <li><input type="radio" id="not-sure" name="recommendation" value="3">
+              <label for="not-sure">Not Sure</label></li>
+        </ul>
+
+        <!--USER'S LIKES-->
+        <label for="likes">What do you like most in FCC?</label>
+        <select id="likes">
+          <option disabled selected>Select an Option</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+          <option value="open-source">Open Source</option>
+        </select>
+
+        <!--USER'S DISLIKES-->
+        <label for="dislikes">Things that should be improved in the future (check all that apply):</label>
+        <ul id="dislikes" class="selections">
+          <li><input type="checkbox" id="front-end" value="1">
+              <label for="front-end">Front-end Projects</label></li>
+          <li><input put type="checkbox" id="back-end" value="2">
+              <label for="back-end">Back-end Projects</label></li>
+          <li><input type="checkbox" id="data-visualization" value="3">
+              <label for="data-visualization">Data Visualization</label></li>
+          <li><input type="checkbox" id="challenges" value="4">
+              <label for="challenges">Challenges</label></li>
+          <li><input type="checkbox" id="open-source" value="5">
+              <label for="open-source">Open Source</label></li>
+          <li><input type="checkbox" id="gitter" value="6">
+              <label for="gitter">Gitter Help Rooms</label></li>
+          <li><input type="checkbox" id="videos" value="7">
+              <label for="videos">Videos</label></li>
+          <li><input type="checkbox" id="meetups" value="8">
+              <label for="meetups">Meetups</label></li>
+          <li><input type="checkbox" id="wiki" value="9">
+              <label for="wiki">Wiki</label></li>
+          <li><input type="checkbox" id="forum" value="10">
+              <label for="forum">Forum</label></li>
+          <li><input type="checkbox" id="courses" value="11">
+              <label for="courses">Additional Courses</label></li>
+        </ul>
+
+        <!--ADDITIONAL COMMENTS SECTION-->
+        <label for="comments">Any Comments or Suggestions?</label>
+        <textarea rows="5" columns="30" maxlength="250">
+        </textarea>
+
+        <!--SUBMIT BUTTON-->
+        <button>Submit</button>
 
       </form>
     </main>
